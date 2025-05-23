@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loja de Ovos e Galinhas</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body onload="jarvisFala()">
+  <header>
+    <h1>Loja de Ovos e Galinhas</h1>
+    <nav>
+      <button onclick="mostrarAba('cardapio')">Ovos</button>
+      <button onclick="mostrarAba('galinhas')">Galinhas</button>
+      <button onclick="mostrarAba('contato')">Contatos</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Cardápio de ovos -->
+    <section id="cardapio" class="aba ativa">
+      <h2>Cardápio de Ovos</h2>
+      <div class="slider">
+        <div class="slide-item" onclick="abrirModal('Ovo Caipira: Galinhas criadas soltas, em ambiente natural, alimentação orgânica.')">
+          <img src="310401-como-melhorar-a-qualidade-dos-ovos-incubaveis-780x450.jpg" alt="Ovo Caipira" />
+          <p><strong>Ovo Caipira</strong> - R$12,00</p>
+        </div>
+        <div class="slide-item" onclick="abrirModal('Ovo Branco: Produzido em granjas com cuidados intensivos e alimentação balanceada.')">
+          <img src="ovos.webp" alt="Ovo Branco" />
+          <p><strong>Ovo Branco</strong> - R$10,00</p>
+        </div>
+        <div class="slide-item" onclick="abrirModal('Ovo Vermelho: Galinhas criadas em sistema semi-intensivo, com mais espaço e melhor dieta.')">
+          <img src="Ovo-1.webp" alt="Ovo Vermelho" />
+          <p><strong>Ovo Vermelho</strong> - R$11,00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venda de galinhas -->
+    <section id="galinhas" class="aba">
+      <h2>Venda de Galinhas</h2>
+      <div class="slider">
+        <div class="slide-item" onclick="abrirModal('Galinhas Caipiras: Criadas soltas, saudáveis e fortes.')">
+          <img src="galinahdas.jpg" alt="Galinhas Caipiras" />
+          <p><strong>Galinhas Caipiras</strong> - R$80,00</p>
+        </div>
+        <div class="slide-item" onclick="abrirModal('Galinhas Poedeiras: Especializadas em alta produção de ovos.')">
+          <img src="galinhas.jpg" alt="Galinhas Poedeiras" />
+          <p><strong>Galinhas Poedeiras</strong> - R$100,00</p>
+        </div>
+        <div class="slide-item" onclick="abrirModal('Galinhas Brahma: Raça grande, boa para criação.')">
+          <img src="galinha.webp" alt="Galinhas Brahma" />
+          <p><strong>Galinhas Brahma</strong> - R$120,00</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="aba">
+      <h2>Sobre a Fabricação</h2>
+      <p>Nossos ovos e galinhas são produzidos e criados com muito cuidado, garantindo qualidade e saúde para você e sua família.</p>
+    </section>
+
+    <section id="contato" class="aba">
+      <h2>Contatos</h2>
+      <p style="text-align:center; font-size:1.2em;">
+        📱 <strong>WhatsApp:</strong> (41) 98798-0949<br />
+        📘 <strong><a href="https://www.facebook.com/christiam.nunesdasilva/" target="_blank">Facebook</a></strong>
+      </p>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="fecharModal(event)">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharModal(event)">&times;</span>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+</body>
+</html>
